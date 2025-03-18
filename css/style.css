@@ -10,6 +10,10 @@
     --lagura-cards:230px;
     --altura-cards:180px;
 
+    --cor-fundo-span01:#def7f9;
+    --cor-fundo-span02:#fff7e1;
+    --cor-fundo-span03:#ffebed;
+
     --cor-principal-cards01:#0094a4;
     --cor-principal-cards02:#ffa100;
     --cor-principal-cards03:#d32e31;
@@ -63,20 +67,20 @@ section{
     margin-bottom: 10px;
 }
 
-#card01{
+.card-01{
     color: var(--color-fonte-01);
     position: relative;
     border:5px solid var(--cor-bordar-cards01);
     
 }
 
-#card02{
+.card-02{
     color: var(--color-fonte-02);
     position: relative;
     border:5px solid var(--cor-bordar-cards02);
 }
 
-#card03{
+.card-03{
     color: var(--color-fonte-03);
     position: relative;
     border:5px solid var(--cor-bordar-cards03);
@@ -92,6 +96,18 @@ section{
     width: 100%;
     font-family: var(--fonte-principal);
     font-weight: bold;
+}
+
+.span-01{
+    background-color: var(--cor-fundo-span01);
+}
+
+.span-02{
+    background-color: var(--cor-fundo-span02);
+}
+
+.span-03{
+    background-color: var(--cor-fundo-span03);
 }
 
 h5{
