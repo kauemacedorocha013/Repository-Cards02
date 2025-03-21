@@ -1,116 +1,111 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    --fonte-principal:arial, sans-serif;
-    --font-secundaria:"oxygen", sans-serif;
+:root {
+  --font-family-roboto: "Roboto", sans-serif;
 
-    --lagura-cards:230px;
-    --altura-cards:180px;
+  --color-green-900: #0094a4;
+  --color-green-800: #9bd9e0;
+  --color-green-700: #def7f9;
 
-    --cor-fundo-span01:#def7f9;
-    --cor-fundo-span02:#fff7e1;
-    --cor-fundo-span03:#ffebed;
+  --color-orange-900: #ffa100;
+  --color-orange-800: #f5e3a4;
+  --color-orange-700: #fff7e1;
 
-    --cor-principal-cards01:#0094a4;
-    --cor-principal-cards02:#ffa100;
-    --cor-principal-cards03:#d32e31;
+  --color-red-900: #d32e31;
+  --color-red-800: #e4acad;
+  --color-red-700: #ffebed;
 
-    --cor-bordar-cards01:rgba(155,217,224,255);
-    --cor-bordar-cards02:rgba(245,227,164,255);
-    --cor-bordar-cards03:rgba(228,172,173,255);
-
-    --color-fonte-01:#0094a4;
-    --color-fonte-02:#ffa100;
-    --color-fonte-03:#d32e31;
+  --default-spacing: 16px;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    font-family: 'Times New Roman', Times, serif;
+body {
+  font-family: var(--font-family-roboto);
+  min-height: 100vh;
 }
 
-section{
-    box-sizing: border-box;
-    display: grid;
-    grid-auto-flow: row;
-    width:60%;
-    height: auto;
-    align-items: center;
-    margin-top: 10px;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--default-spacing);
+  display: flex;
+  flex-direction: column;
+  gap: var(--default-spacing);
 }
 
-.container-cards{
-    justify-content: space-between;
-    display: grid;
-    grid-auto-flow: column;
-    padding: 05px;
-    margin: 0;
-    border: none;
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--default-spacing);
 }
 
-.cards{
-    box-sizing: border-box;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: var(--lagura-cards);
-    height: var(--altura-cards);
-}
-#iconi{
-    margin-top: 50px;
-    margin-bottom: 10px;
+.cards .card {
+  --local-spacing: 20px;
+  flex: 1 0 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: var(--local-spacing);
 }
 
-.card-01{
-    color: var(--color-fonte-01);
-    position: relative;
-    border:5px solid var(--cor-bordar-cards01);
-    
+.cards .card .card-title {
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  border-bottom: 2px solid #000000;
+  font-size: 20px;
+  font-weight: 500;
 }
 
-.card-02{
-    color: var(--color-fonte-02);
-    position: relative;
-    border:5px solid var(--cor-bordar-cards02);
+.cards .card .card-icon {
+  font-size: 40px;
+  margin-block: var(--local-spacing);
 }
 
-.card-03{
-    color: var(--color-fonte-03);
-    position: relative;
-    border:5px solid var(--cor-bordar-cards03);
+.cards .card .card-description {
+  font-size: 18px;
 }
 
-.container-span{
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0px 10px 0px;
-    position: absolute;
-    top: 0;
-    display: flex;
-    width: 100%;
-    font-family: var(--fonte-principal);
-    font-weight: bold;
+.cards.cards-green .card,
+.cards.cards-green .card .card-title {
+  border-color: var(--color-green-800);
+}
+.cards.cards-green .card {
+  color: var(--color-green-900);
+}
+.cards.cards-green .card .card-title {
+  background-color: var(--color-green-700);
 }
 
-.span-01{
-    background-color: var(--cor-fundo-span01);
+.cards.cards-orange .card,
+.cards.cards-orange .card .card-title {
+  border-color: var(--color-orange-800);
+}
+.cards.cards-orange .card {
+  color: var(--color-orange-900);
+}
+.cards.cards-orange .card .card-title {
+  background-color: var(--color-orange-700);
 }
 
-.span-02{
-    background-color: var(--cor-fundo-span02);
+.cards.cards-red .card,
+.cards.cards-red .card .card-title {
+  border-color: var(--color-red-800);
+}
+.cards.cards-red .card {
+  color: var(--color-red-900);
+}
+.cards.cards-red .card .card-title {
+  background-color: var(--color-red-700);
 }
 
-.span-03{
-    background-color: var(--cor-fundo-span03);
-}
-
-h5{
-    font-style: normal;
-    font-family: var(--font-secundaria);
+.fa-dumbbell.fa-dumbbell-45deg {
+  rotate: 45deg;
 }
