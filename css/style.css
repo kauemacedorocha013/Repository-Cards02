@@ -25,6 +25,10 @@
     --color-fonte-01:#0094a4;
     --color-fonte-02:#ffa100;
     --color-fonte-03:#d32e31;
+
+    --color-icon-01:#0097ab;
+    --color-icon-02:#f79d00;
+    --color-icon-03:#d32e31;
 }
 
 body{
@@ -65,6 +69,18 @@ section{
 #iconi{
     margin-top: 50px;
     margin-bottom: 10px;
+}
+
+.icon01{
+    color: var(--color-icon-01);
+}
+
+.icon02{
+    color: var(--color-icon-02);
+}
+
+.icon03{
+    color: var(--color-icon-03);
 }
 
 .card-01{
